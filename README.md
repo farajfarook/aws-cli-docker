@@ -1,1 +1,15 @@
-"# aws-cli-docker"  git init git add README.md git commit -m "first commit" git remote add origin git@github.com:enbiso/aws-cli-docker.git git push -u origin master
+# aws-cli-docker
+
+Contains AWS CLI & AWS CDK
+
+## Usage
+
+```
+
+docker run \
+--env ENV AWS_KEY_ID=XXX \
+--env ENV AWS_SECRET=YYY \
+--env ENV AWS_REGION=ap-southeast-2 \
+enbiso/aws-cli
+
+```
