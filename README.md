@@ -7,9 +7,9 @@ Contains AWS CLI & AWS CDK
 ```
 
 docker run \
---env ENV AWS_KEY_ID=XXX \
---env ENV AWS_SECRET=YYY \
---env ENV AWS_REGION=ap-southeast-2 \
+--env AWS_KEY_ID=XXX \
+--env AWS_SECRET=YYY \
+--env AWS_REGION=ap-southeast-2 \
 enbiso/aws-cli
 
 ```
