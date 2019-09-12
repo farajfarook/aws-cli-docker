@@ -6,11 +6,11 @@ ENV AWS_SECRET=YYY
 ENV AWS_REGION=ap-southeast-2
 
 #required packages
-#RUN rm -rf /etc/yum.repos.d/nodesource-el* \
-#    && curl -sL https://rpm.nodesource.com/setup_10.x | bash - \
-#    && yum install -y nodejs --enablerepo=nodesource \
-#    && yum install -y aws-cli \
-#    && npm install -g aws-cdk
+RUN rm -rf /etc/yum.repos.d/nodesource-el* \
+    && curl -sL https://rpm.nodesource.com/setup_10.x | bash - \
+    && yum install -y nodejs --enablerepo=nodesource \
+    && yum install -y aws-cli \
+    && npm install -g aws-cdk
 
 #configure
 RUN mkdir -p ~/.aws
