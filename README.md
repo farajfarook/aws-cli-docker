@@ -1,15 +1,15 @@
 # aws-cli-docker
 
-Contains AWS CLI & AWS CDK
+Contains Docker DIND, AWS CLI & CDK
 
 ## Usage
 
 ```
 
 docker run \
---env AWS_KEY_ID=XXX \
---env AWS_SECRET=YYY \
---env AWS_REGION=ap-southeast-2 \
+--env AWS_ACCESS_KEY_ID=XXX \
+--env AWS_SECRET_ACCESS_KEY=YYY \
+--env AWS_DEFAULT_REGION=ap-southeast-2 \
 enbiso/aws-cli
 
 ```
