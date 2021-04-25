@@ -13,3 +13,14 @@ docker run \
 enbiso/aws-cli
 
 ```
+
+
+```
+
+docker run \
+--env AWS_ACCESS_KEY_ID=XXX \
+--env AWS_SECRET_ACCESS_KEY=YYY \
+--env AWS_DEFAULT_REGION=ap-southeast-2 \
+docker.pkg.github.com/enbiso/aws-cli-docker/aws-cli
+
+```
