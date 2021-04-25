@@ -1,0 +1,23 @@
+name: Main Pipeline
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    name: Build/Release Container
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+
+      - name: Authenticate
+        run: echo ${{ secrets.GITHUB_TOKEN }} | docker login https://docker.pkg.github.com -u $GITHUB_ACTOR --password-stdin
+
+      - name: Build
+        run: docker build . -t ghcr.io/enbiso/aws-cli
+
+      - name: Push
+        run: docker push ghcr.io/enbiso/aws-cli
